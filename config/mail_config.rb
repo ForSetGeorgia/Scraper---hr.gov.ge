@@ -1,7 +1,7 @@
 if environment_is_production
   Mail.defaults do
     delivery_method :smtp,
-                    address: 'smtp.gmail.com',
+                    address: ENV['FEEDBACK_ADDRESS'],
                     port: '587',
                     user_name: ENV['FEEDBACK_FROM_EMAIL'],
                     password: ENV['FEEDBACK_FROM_EMAIL_PASSWORD'],
