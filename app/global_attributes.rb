@@ -14,7 +14,7 @@
 
 
 # starting url
-@posting_url = "https://www.hr.gov.ge/JobProvider/UserOrgVakActives/Details/"
+@posting_url = "https://www.hr.gov.ge/JobProvider/UserOrgVaks/Details/"
 @serach_url = "https://www.hr.gov.ge/"
 @page_param = "?pageNo="
 
