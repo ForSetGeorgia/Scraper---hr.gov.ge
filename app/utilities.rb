@@ -10,6 +10,7 @@ def json_template
 
   json[:common] = {}
   json[:common][:title] = nil
+  json[:common][:competition_type] = nil
   json[:common][:employer] = nil
   json[:common][:category] = nil
   json[:common][:deadline] = nil
@@ -157,9 +158,17 @@ def create_sql_insert(mysql, json, source)
     fields << 'title'
     values << json["common"]["title"]
   end
+  if !json["common"]["competition_type"].nil?
+    fields << 'competition_type'
+    values << json["common"]["competition_type"]
+  end
   if !json["common"]["employer"].nil?
     fields << 'employer'
     values << json["common"]["employer"]
+  end
+  if !json["common"]["employer_about"].nil?
+    fields << 'employer_about'
+    values << json["common"]["employer_about"]
   end
   if !json["common"]["category"].nil?
     fields << 'category'

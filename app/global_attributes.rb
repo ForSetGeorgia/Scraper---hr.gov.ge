@@ -55,9 +55,11 @@
 
 @labels[:common] = {}
 @labels[:common][:title] = 'თანამდებობის დასახელება'
-@labels[:common][:employer] = 'დამსაქმებელი'
+@labels[:common][:competition_type] = 'კონკურსის ტიპი'
+@labels[:common][:employer] = 'ორგანიზაცია'
+@labels[:common][:employer_about] = 'ორგანიზაციის შესახებ'
 @labels[:common][:category] = 'კატეგორია'
-@labels[:common][:deadline] = 'განცხადების წარდგენის ბოლო ვადა'
+@labels[:common][:deadline] = 'განცხადების ბოლო ვადა'
 @labels[:common][:salary] = 'თანამდებობრივი სარგო:'
 @labels[:common][:number_openings] = 'ადგილების რაოდენობა'
 @labels[:common][:duty] = 'სამსახურის ადგილმდებარეობა'
@@ -77,7 +79,7 @@
 @labels[:common][:contact_phone] = 'საკონტაქტო ტელეფონები'
 @labels[:common][:contact_person] = 'საკონტაქტო პირი'
 
-@labels[:common][:additional_requirements] = 'დამატებით მოთხოვნები'
+@labels[:common][:additional_requirements] = 'დამატებითი მოთხოვნები'
 @labels[:common][:for_more_information] = 'დამატებითი ინფორმაცია'
 @labels[:common][:form_and_terms_of_decision] = 'გადაწყვეტილების მიღების ფორმა და ვადა'
 

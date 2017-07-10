@@ -104,7 +104,9 @@ class PostingsDatabase
       `posting_id` varchar(255) not null,\
       `source` varchar(255) not null,\
       `title` varchar(500) default null,\
+      `competition_type` varchar(500) default null,\
       `employer` varchar(500) default null,\
+      `employer_about` text default null,\
       `category` varchar(255) default null,\
       `deadline` date default null,\
       `salary` int(11) default null,\
