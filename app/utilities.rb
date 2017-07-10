@@ -101,7 +101,7 @@ def get_param_value(url, key)
 end
 
 # pull out id from url
-# href is in format: /JobProvider/UserOrgVakActives/Details/39510
+# href is in format: /JobProvider/UserOrgVak/Details/39510
 # - where the last part is the id
 def get_url_id(url)
   if !url.nil?
