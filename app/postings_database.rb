@@ -103,6 +103,7 @@ class PostingsDatabase
       `id` int(11) NOT NULL AUTO_INCREMENT,\
       `posting_id` varchar(255) not null,\
       `source` varchar(255) not null,\
+      `position_title` varchar(500) default null,\
       `title` varchar(500) default null,\
       `competition_type` varchar(500) default null,\
       `employer` varchar(500) default null,\

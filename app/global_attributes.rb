@@ -54,6 +54,7 @@
 @labels[:posting_id] = nil
 
 @labels[:common] = {}
+@labels[:common][:position_title] = 'თანამდებობის დასახელება'
 @labels[:common][:title] = 'პოზიციის დასახელება'
 @labels[:common][:competition_type] = 'კონკურსის ტიპი'
 @labels[:common][:employer] = 'ორგანიზაცია'
