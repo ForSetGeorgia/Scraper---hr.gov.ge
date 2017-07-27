@@ -41,7 +41,7 @@ def make_requests
     # get the html
     doc = Nokogiri::HTML(open(url, {ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE}))
 
-    search_results = doc.css('table.vacans-table > tbody tr td:first a')
+    search_results = doc.css('table.vacans-table > tbody tr td:nth-of-type(2) a')
 
     # if the search results has either no response, stop
     if search_results.length == 0
@@ -79,7 +79,7 @@ def make_requests
 
     # build the url
     url = @posting_url + posting[:id]
-    request = Typhoeus::Request.new("#{url}", followlocation: true)
+    request = Typhoeus::Request.new("#{url}", followlocation: true, ssl_verifypeer: false, ssl_verifyhost: 0)
 
     request.on_complete do |response|
       if response.success?
