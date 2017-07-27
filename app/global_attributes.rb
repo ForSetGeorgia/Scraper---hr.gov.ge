@@ -54,7 +54,7 @@
 @labels[:posting_id] = nil
 
 @labels[:common] = {}
-@labels[:common][:title] = 'თანამდებობის დასახელება'
+@labels[:common][:title] = 'პოზიციის დასახელება'
 @labels[:common][:competition_type] = 'კონკურსის ტიპი'
 @labels[:common][:employer] = 'ორგანიზაცია'
 @labels[:common][:employer_about] = 'ორგანიზაციის შესახებ'
@@ -75,7 +75,7 @@
 
 @labels[:common][:competition_topic] = 'საკონკურსო თემატიკა'
 
-@labels[:common][:contact_address] = 'საკონკურსო - საატესტაციო კომისიის მისამართი'
+@labels[:common][:contact_address] = 'საკონკურსო კომისიის მისამართი'
 @labels[:common][:contact_phone] = 'საკონტაქტო ტელეფონები'
 @labels[:common][:contact_person] = 'საკონტაქტო პირი'
 
