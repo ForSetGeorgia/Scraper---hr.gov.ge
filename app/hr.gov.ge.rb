@@ -8,7 +8,7 @@ def make_requests
   # pull in first search results page
   url = @serach_url
 
-  doc = Nokogiri::HTML(open(url))
+  doc = Nokogiri::HTML(open(url, {ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE}))
 
   # get the number of pages of search results that exist
   # - get the p param out of the last page pagination link
@@ -39,7 +39,7 @@ def make_requests
     url = @serach_url + @page_param + i.to_s
 
     # get the html
-    doc = Nokogiri::HTML(open(url))
+    doc = Nokogiri::HTML(open(url, {ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE}))
 
     search_results = doc.css('table.vacans-table > tbody tr td:first a')
 
