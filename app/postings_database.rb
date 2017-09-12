@@ -133,6 +133,7 @@ class PostingsDatabase
       `additional_requirements` text default null,\
       `for_more_information` text default null,\
       `form_and_terms_of_decision` varchar(500) default null,\
+      `closed_vacancy_job_number` varchar(500) default null,\
 
 
       `computer_software` varchar(500) default null,\

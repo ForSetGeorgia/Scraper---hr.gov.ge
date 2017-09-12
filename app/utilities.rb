@@ -38,6 +38,7 @@ def json_template
   json[:common][:additional_requirements] = nil
   json[:common][:for_more_information] = nil
   json[:common][:form_and_terms_of_decision] = nil
+  json[:common][:closed_vacancy_job_number] = nil
 
   json[:special_cases] = {}
   json[:special_cases][:computer_software] = nil
@@ -260,6 +261,11 @@ def create_sql_insert(mysql, json, source)
   if !json["common"]["form_and_terms_of_decision"].nil?
     fields << 'form_and_terms_of_decision'
     values << json["common"]["form_and_terms_of_decision"]
+  end
+
+  if !json["common"]["closed_vacancy_job_number"].nil?
+    fields << 'closed_vacancy_job_number'
+    values << json["common"]["closed_vacancy_job_number"]
   end
 
   if !json["special_cases"]["computer_software"].nil?

@@ -83,6 +83,7 @@
 @labels[:common][:additional_requirements] = 'დამატებითი მოთხოვნები'
 @labels[:common][:for_more_information] = 'დამატებითი ინფორმაცია'
 @labels[:common][:form_and_terms_of_decision] = 'გადაწყვეტილების მიღების ფორმა და ვადა'
+@labels[:common][:closed_vacancy_job_number] = 'დახურული კონკურსის ვაკანსიის ნომერი'
 
 @labels[:special_cases] = {}
 @labels[:special_cases][:computer_software] = 'კომპიუტერული პროგრამები, ოპერაციული სისტემები'
