@@ -90,35 +90,40 @@ def process_response(response)
 
     # languages
     # - row format: language | written | spoken
-    languages = sections[1].css('tr')
-    languages.each_with_index do |language, lang_index|
-      if lang_index == 0
-        json[:special_cases][:languages] = []
-      else
-        temp = json_language_template.dup
-        temp[:language] = language.css('td')[0].text.strip
-        temp[:writing] = language.css('td')[2].text.strip
-        temp[:speaking] = language.css('td')[4].text.strip
-        json[:special_cases][:languages] << temp
+    if !sections[1].nil?
+      languages = sections[1].css('tr')
+      languages.each_with_index do |language, lang_index|
+        if lang_index == 0
+          json[:special_cases][:languages] = []
+        else
+          temp = json_language_template.dup
+          temp[:language] = language.css('td')[0].text.strip
+          temp[:writing] = language.css('td')[2].text.strip
+          temp[:speaking] = language.css('td')[4].text.strip
+          json[:special_cases][:languages] << temp
+        end
       end
     end
 
     # competition_stages
     # - row format: value
-    json[:special_cases][:competition_stages] = []
-    stages = sections[2].css('tr')
-    stages.each do |stage|
-      json[:special_cases][:competition_stages] << stage.css('td')[0].text.strip
+    if !sections[2].nil?
+      json[:special_cases][:competition_stages] = []
+      stages = sections[2].css('tr')
+      stages.each do |stage|
+        json[:special_cases][:competition_stages] << stage.css('td')[0].text.strip
+      end
     end
 
     # mandatory_blocks
     # - div > label > text
-    json[:special_cases][:mandatory_blocks] = []
-    blocks = sections[3].css('div > label')
-    blocks.each do |block|
-      json[:special_cases][:mandatory_blocks] << block.text.strip
+    if !sections[3].nil?
+      json[:special_cases][:mandatory_blocks] = []
+      blocks = sections[3].css('div > label')
+      blocks.each do |block|
+        json[:special_cases][:mandatory_blocks] << block.text.strip
+      end
     end
-
   end
 
   if !json[:posting_id].nil?
